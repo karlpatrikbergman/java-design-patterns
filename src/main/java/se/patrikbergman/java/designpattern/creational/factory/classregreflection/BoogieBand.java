@@ -1,8 +1,8 @@
-package se.patrikbergman.java.designpattern.creational.factory.classregreflection.bandimplementation;
+package se.patrikbergman.java.designpattern.creational.factory.classregreflection;
 
 import static se.patrikbergman.java.designpattern.creational.factory.classregreflection.Band.Type.BOOGIE_BAND;
 
-public class BoogieBand implements se.patrikbergman.java.designpattern.creational.factory.classregreflection.Band {
+class BoogieBand implements se.patrikbergman.java.designpattern.creational.factory.classregreflection.Band {
 
     private final static String className = BoogieBand.class.getSimpleName();
     private final static Type TYPE = BOOGIE_BAND;

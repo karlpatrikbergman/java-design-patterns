@@ -13,7 +13,7 @@ import java.util.Map;
  *
  */
 @SuppressWarnings("ALL")
-public class Factory {
+class Factory {
 
     private final Map<Band.Type, Class> registeredBands = new HashMap<>();
     private static Factory instance;

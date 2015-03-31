@@ -1,10 +1,8 @@
-package se.patrikbergman.java.designpattern.creational.factory.classregreflection.bandimplementation;
-
-import se.patrikbergman.java.designpattern.creational.factory.classregreflection.Band;
+package se.patrikbergman.java.designpattern.creational.factory.classregreflection;
 
 import static se.patrikbergman.java.designpattern.creational.factory.classregreflection.Band.Type.BLUES_BAND;
 
-public class BluesBand implements Band {
+class BluesBand implements Band {
 
     private final static String className = BluesBand.class.getSimpleName();
     private final static Type TYPE = BLUES_BAND;
