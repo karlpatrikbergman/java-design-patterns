@@ -1,15 +1,13 @@
 package se.patrikbergman.java.designpattern.creational.factory.classregreflection;
 
 import org.junit.Test;
-import se.patrikbergman.java.designpattern.creational.factory.classregreflection.bandimplementation.BluesBand;
-import se.patrikbergman.java.designpattern.creational.factory.classregreflection.bandimplementation.BoogieBand;
-import se.patrikbergman.java.designpattern.creational.factory.classregreflection.bandimplementation.RockBand;
 
 public class FactoryTest {
 
+    //Dynamic runtime loading. I have forgotten why?
     static {
         try {
-            final String pkg= "se.patrikbergman.java.designpattern.creational.factory.classregreflection.bandimplementation.";
+            final String pkg= "se.patrikbergman.java.designpattern.creational.factory.classregreflection.";
             Class.forName(pkg.concat("RockBand"));
             Class.forName(pkg.concat("BluesBand"));
             Class.forName(pkg.concat("BoogieBand"));
