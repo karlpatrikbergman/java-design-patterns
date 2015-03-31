@@ -1,0 +1,9 @@
+Goal:
+We need to be able to execute all Accounts methods, and take certain actions depending on the Exception that is
+thrown. We don't want to repeat catch clauses in every method (withdraw, purchase, deposit etc)
+
+Solution:
+Put exception handling/mapping in abstract class AccountExecutor. Create anonymous classes that implements
+AbstractExecutor.
+
+In a real world example AccountClient would probably do more than just delegate to Account.

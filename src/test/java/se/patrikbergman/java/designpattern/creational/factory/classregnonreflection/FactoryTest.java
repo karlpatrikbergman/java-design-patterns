@@ -1,9 +1,6 @@
 package se.patrikbergman.java.designpattern.creational.factory.classregnonreflection;
 
 import org.junit.Test;
-import se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.bandimplementation.BluesBand;
-import se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.bandimplementation.BoogieBand;
-import se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.bandimplementation.RockBand;
 
 public class FactoryTest {
 
