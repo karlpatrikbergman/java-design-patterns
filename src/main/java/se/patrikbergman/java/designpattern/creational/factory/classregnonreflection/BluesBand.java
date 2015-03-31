@@ -1,11 +1,8 @@
-package se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.bandimplementation;
-
-import se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.Band;
-import se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.Factory;
+package se.patrikbergman.java.designpattern.creational.factory.classregnonreflection;
 
 import static se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.Band.Type.BLUES_BAND;
 
-public class BluesBand extends Band {
+class BluesBand extends Band {
 
     private final static String className = BluesBand.class.getSimpleName();
 

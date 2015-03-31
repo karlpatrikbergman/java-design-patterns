@@ -1,11 +1,8 @@
-package se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.bandimplementation;
-
-import se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.Band;
-import se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.Factory;
+package se.patrikbergman.java.designpattern.creational.factory.classregnonreflection;
 
 import static se.patrikbergman.java.designpattern.creational.factory.classregnonreflection.Band.Type.BOOGIE_BAND;
 
-public class BoogieBand extends Band {
+class BoogieBand extends Band {
 
     private final static String className = BoogieBand.class.getSimpleName();
 
