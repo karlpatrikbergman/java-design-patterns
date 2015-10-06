@@ -2,6 +2,10 @@ package se.patrikbergman.java.designpattern.creational.factory.classregreflectio
 
 import org.junit.Test;
 
+/**
+ * TODO: Add asserts
+ */
+
 public class FactoryTest {
 
     //Dynamic runtime loading. I have forgotten why?

@@ -12,7 +12,6 @@ import java.util.Map;
  * Reflection has negative impact on performance.
  *
  */
-@SuppressWarnings("ALL")
 class Factory {
 
     private final Map<Band.Type, Class> registeredBands = new HashMap<>();
@@ -25,7 +24,8 @@ class Factory {
     public Band bookBand(final Band.Type key) throws NoSuchMethodException, IllegalAccessException,
             InvocationTargetException, InstantiationException {
         Class clazz = registeredBands.get(key);
-        Constructor constructor = clazz.getDeclaredConstructor(new Class[] {  });
+        @SuppressWarnings("unchecked")
+        Constructor constructor = clazz.getDeclaredConstructor();
         return (Band) constructor.newInstance();
     }
 

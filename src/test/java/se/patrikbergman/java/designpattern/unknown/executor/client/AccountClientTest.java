@@ -14,7 +14,27 @@ public class AccountClientTest {
 	private final AccountClient accountClient = new AccountClient(account);
 
 	@Test
+	public void withdraw() {
+		accountClient.withdraw();
+	}
+
+	@Test
+	public void purchase() {
+		accountClient.purchase();
+	}
+
+	@Test
 	public void deposit() {
 		accountClient.deposit();
+	}
+
+	@Test
+	public void returnOfGoods() {
+		accountClient.returnOfGoods();
+	}
+
+	@Test
+	public void reverse() {
+		accountClient.reverse();
 	}
 }

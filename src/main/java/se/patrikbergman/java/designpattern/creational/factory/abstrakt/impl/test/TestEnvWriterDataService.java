@@ -3,10 +3,10 @@ import se.patrikbergman.java.designpattern.creational.factory.abstrakt.AbstractW
 
 public class TestEnvWriterDataService extends AbstractWriterDataService {
     private final String className = TestEnvComposerDataService.class.getSimpleName();
-    private final String url = "jdbc:test.patrikbergman.se:1521/writerService";
 
     @Override
     public void connect() {
+        String url = "jdbc:test.patrikbergman.se:1521/writerService";
         System.out.println(String.format("%s.connect() to url %s", className, url));
     }
 }

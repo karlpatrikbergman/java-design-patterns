@@ -1,7 +1,7 @@
 package se.patrikbergman.java.designpattern.creational.factory.classregnonreflection;
 
-public abstract class Band {
-    public static enum Type{ROCK_BAND, BLUES_BAND, BOOGIE_BAND}
-    public abstract Band create();
-    public abstract void play();
+abstract class Band {
+    enum Type{ROCK_BAND, BLUES_BAND, BOOGIE_BAND}
+    abstract Band create();
+    abstract void play();
 }

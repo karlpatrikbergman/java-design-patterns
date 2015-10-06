@@ -7,7 +7,7 @@ import se.patrikbergman.java.designpattern.unknown.executor.service.api.exceptio
 import se.patrikbergman.java.designpattern.unknown.executor.service.api.exception.CardExpiredException;
 import se.patrikbergman.java.designpattern.unknown.executor.service.api.exception.InvalidCardException;
 import se.patrikbergman.java.designpattern.unknown.executor.service.api.exception.TechnicalErrorException;
-import se.patrikbergman.java.designpattern.unknown.executor.service.api.exception.UknownAccountException;
+import se.patrikbergman.java.designpattern.unknown.executor.service.api.exception.UnknownAccountException;
 import se.patrikbergman.java.designpattern.unknown.executor.service.api.exception.WrongPinException;
 
 public class AccountService implements Account {
@@ -15,7 +15,6 @@ public class AccountService implements Account {
 	@Override
 	public void withdraw() throws AccountException {
 		throwRandomException();
-
 	}
 
 	@Override
@@ -52,11 +51,11 @@ public class AccountService implements Account {
 			case 5:
 				throw new TechnicalErrorException();
 			case 6:
-				throw new UknownAccountException();
+				throw new UnknownAccountException();
 			default:
-				throw new AccountException();
+				throw new AccountException("General Account Exception");
 		}
 
-		//InvalidCard, CardExpired, WrongPin, CardBlocked, TechnicalError, UknownAccount
+		//InvalidCard, CardExpired, WrongPin, CardBlocked, TechnicalError, UnknownAccount
 	}
 }
