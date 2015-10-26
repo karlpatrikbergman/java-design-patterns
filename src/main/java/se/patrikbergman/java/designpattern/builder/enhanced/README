@@ -1,0 +1,11 @@
+http://brainbaking.com/enhancing-the-builder-pattern-with-closures/
+
+Potentinal "problem" with reuse of builder:
+
+Band.Builder builder = new Band.Builder();
+builder.name("")
+and so on...
+
+- now "builder" can be used again?
+- before build() is invoked builder can be mutated?
+
