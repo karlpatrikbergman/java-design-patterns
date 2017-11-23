@@ -7,16 +7,5 @@ import lombok.Value;
  */
 @Value
 class RnbSong implements Song {
-
     private final String lyrics;
-
-    @Override
-    public int getRockFactor() {
-        return 1;
-    }
-
-    @Override
-    public int getRomanticFactor() {
-        return 10;
-    }
 }
