@@ -8,15 +8,16 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class SongWriterTest {
+public class ClientUsingSongsInSomeWay {
 
     @Test
     public void abstractFactoryBeforeJava8() {
 
         //Before Java 8 functional interfaces
         //HeavyMetalSongWriter is a concrete factory of type SongWriter
-        //A client can retrieve instance of SongWriter once, and later get instances of Songs without knowing
-        //about how they where created (metal-song or rnb-song)
+        //A client (using Songs in some way) can retrieve instance of SongWriter once, and later get
+        //instances of Songs without knowing about how they where created (metal-song or rnb-song)
+        //In the api for songwriter/song a method returning SongWriter could be implemented as:
         SongWriter songWriter = new HeavyMetalSongWriter();
         Song song = songWriter.writeSong("Some nice lyrics");
 
@@ -27,7 +28,7 @@ public class SongWriterTest {
     @Test
     public void abstractFactoryUsingJava8FunctionalInterface() {
         //Using Java 8 functional interface we can get rid of concrete factories (HeavyMetalSongwriter and RnbSongWriter)
-        //Sing SongWriter is a functional interface
+        //since SongWriter is a functional interface
         SongWriter songWriter1 = lyrics -> new RnbSong(lyrics);
         Song song1 = songWriter1.writeSong("Some nice lyrics");
 
@@ -44,6 +45,7 @@ public class SongWriterTest {
 
     @Test
     public void abstractFactoryUsingJava8FunctionalInterface2() {
+        //Going even further we can get rid of the abstract factory SongWriter as well
         Function<String, Song> songWriter = HeavyMetalSong::new;
         Song song = songWriter.apply("Some nice lyrics");
         assertTrue(song instanceof HeavyMetalSong);
